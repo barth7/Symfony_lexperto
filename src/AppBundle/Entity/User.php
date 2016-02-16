@@ -13,6 +13,8 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 /**
  * @ORM\Entity
  * @ORM\Table(name="fos_user")
+ * @UniqueEntity("email", message="Użytkownik z takim emailem już jest zarejestrowany!")
+ * @UniqueEntity("phone", message="Użytkownik z takim numerem telefonu już jest zarejestrowany!")
  */
 class User extends BaseUser
 {
