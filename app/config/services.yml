@@ -12,3 +12,6 @@ services:
                 arguments: ['@doctrine.orm.entity_manager']
       fos_user.doctrine_registry:
               alias: doctrine
+      app.lead_manager:
+                  class: AppBundle\Services\Lead\LeadManager
+                  arguments: ['@doctrine.orm.entity_manager']

@@ -86,4 +86,316 @@ class User extends BaseUser
         parent::__construct();
         $this->createdDate = new \DateTime();
     }
+
+    /**
+     * Set fname
+     *
+     * @param string $fname
+     *
+     * @return User
+     */
+    public function setFname($fname)
+    {
+        $this->fname = $fname;
+
+        return $this;
+    }
+
+    /**
+     * Get fname
+     *
+     * @return string
+     */
+    public function getFname()
+    {
+        return $this->fname;
+    }
+
+    /**
+     * Set sname
+     *
+     * @param string $sname
+     *
+     * @return User
+     */
+    public function setSname($sname)
+    {
+        $this->sname = $sname;
+
+        return $this;
+    }
+
+    /**
+     * Get sname
+     *
+     * @return string
+     */
+    public function getSname()
+    {
+        return $this->sname;
+    }
+
+    /**
+     * Set academicDegree
+     *
+     * @param string $academicDegree
+     *
+     * @return User
+     */
+    public function setAcademicDegree($academicDegree)
+    {
+        $this->academicDegree = $academicDegree;
+
+        return $this;
+    }
+
+    /**
+     * Get academicDegree
+     *
+     * @return string
+     */
+    public function getAcademicDegree()
+    {
+        return $this->academicDegree;
+    }
+
+    /**
+     * Set phone
+     *
+     * @param string $phone
+     *
+     * @return User
+     */
+    public function setPhone($phone)
+    {
+        $this->phone = $phone;
+
+        return $this;
+    }
+
+    /**
+     * Get phone
+     *
+     * @return string
+     */
+    public function getPhone()
+    {
+        return $this->phone;
+    }
+
+    /**
+     * Set office
+     *
+     * @param string $office
+     *
+     * @return User
+     */
+    public function setOffice($office)
+    {
+        $this->office = $office;
+
+        return $this;
+    }
+
+    /**
+     * Get office
+     *
+     * @return string
+     */
+    public function getOffice()
+    {
+        return $this->office;
+    }
+
+    /**
+     * Set city
+     *
+     * @param string $city
+     *
+     * @return User
+     */
+    public function setCity($city)
+    {
+        $this->city = $city;
+
+        return $this;
+    }
+
+    /**
+     * Get city
+     *
+     * @return string
+     */
+    public function getCity()
+    {
+        return $this->city;
+    }
+
+    /**
+     * Set zipcode
+     *
+     * @param string $zipcode
+     *
+     * @return User
+     */
+    public function setZipcode($zipcode)
+    {
+        $this->zipcode = $zipcode;
+
+        return $this;
+    }
+
+    /**
+     * Get zipcode
+     *
+     * @return string
+     */
+    public function getZipcode()
+    {
+        return $this->zipcode;
+    }
+
+    /**
+     * Set workers
+     *
+     * @param integer $workers
+     *
+     * @return User
+     */
+    public function setWorkers($workers)
+    {
+        $this->workers = $workers;
+
+        return $this;
+    }
+
+    /**
+     * Get workers
+     *
+     * @return integer
+     */
+    public function getWorkers()
+    {
+        return $this->workers;
+    }
+
+    /**
+     * Set www
+     *
+     * @param string $www
+     *
+     * @return User
+     */
+    public function setWww($www)
+    {
+        $this->www = $www;
+
+        return $this;
+    }
+
+    /**
+     * Get www
+     *
+     * @return string
+     */
+    public function getWww()
+    {
+        return $this->www;
+    }
+
+    /**
+     * Set createdDate
+     *
+     * @param \DateTime $createdDate
+     *
+     * @return User
+     */
+    public function setCreatedDate($createdDate)
+    {
+        $this->createdDate = $createdDate;
+
+        return $this;
+    }
+
+    /**
+     * Get createdDate
+     *
+     * @return \DateTime
+     */
+    public function getCreatedDate()
+    {
+        return $this->createdDate;
+    }
+
+    /**
+     * Set externalId
+     *
+     * @param string $externalId
+     *
+     * @return User
+     */
+    public function setExternalId($externalId)
+    {
+        $this->externalId = $externalId;
+
+        return $this;
+    }
+
+    /**
+     * Get externalId
+     *
+     * @return string
+     */
+    public function getExternalId()
+    {
+        return $this->externalId;
+    }
+
+    /**
+     * Set latitude
+     *
+     * @param float $latitude
+     *
+     * @return User
+     */
+    public function setLatitude($latitude)
+    {
+        $this->latitude = $latitude;
+
+        return $this;
+    }
+
+    /**
+     * Get latitude
+     *
+     * @return float
+     */
+    public function getLatitude()
+    {
+        return $this->latitude;
+    }
+
+    /**
+     * Set longitude
+     *
+     * @param float $longitude
+     *
+     * @return User
+     */
+    public function setLongitude($longitude)
+    {
+        $this->longitude = $longitude;
+
+        return $this;
+    }
+
+    /**
+     * Get longitude
+     *
+     * @return float
+     */
+    public function getLongitude()
+    {
+        return $this->longitude;
+    }
 }

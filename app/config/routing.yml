@@ -1,7 +1,19 @@
 
 sylius_cart:
-    resource: @SyliusCartBundle/Resources/config/routing.yml
+    resource: "@SyliusCartBundle/Resources/config/routing.yml"
     prefix: /cart
 
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+_welcome:
+    path:      /
+    defaults:  { _controller: AppBundle:Default:index }
+
+_control_panel_list_paginated:
+    path:     /user-panel/list={page}
+    defaults:  { _controller: AppBundle:ControlPanel/Default:listLeads, page: 1 }
+
+_control_panel_list:
+    path:     /user-panel/list
+    defaults:  { _controller: AppBundle:ControlPanel/Default:listLeads, page: 1 }

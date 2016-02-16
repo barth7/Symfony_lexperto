@@ -13,6 +13,7 @@ class AppKernel extends Kernel {
 			new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
 			new Symfony\Bundle\SecurityBundle\SecurityBundle(),
 			new Symfony\Bundle\TwigBundle\TwigBundle(),
+			new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
 			new Symfony\Bundle\MonologBundle\MonologBundle(),
 			new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
 			new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
@@ -21,6 +22,7 @@ class AppKernel extends Kernel {
 			new FOS\RestBundle\FOSRestBundle(),
 			new FOS\UserBundle\FOSUserBundle(),
 			new JMS\SerializerBundle\JMSSerializerBundle($this),
+
 		];
 
 		if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

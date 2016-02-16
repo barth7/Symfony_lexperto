@@ -1,7 +1,7 @@
 <?php
 
 // src/App/AppBundle/Cart/ItemResolver.php
-namespace App\AppBundle\Cart;
+namespace AppBundle\Cart;
 
 use Doctrine\ORM\EntityManager;
 use Sylius\Component\Cart\Model\CartItemInterface;
@@ -9,7 +9,7 @@ use Sylius\Component\Cart\Resolver\ItemResolverInterface;
 use Sylius\Component\Cart\Resolver\ItemResolvingException;
 
 class ItemResolver implements ItemResolverInterface {
-	private $entityManager;
+	public $entityManager;
 
 	public function __construct(EntityManager $entityManager) {
 		$this->entityManager = $entityManager;
@@ -25,13 +25,17 @@ class ItemResolver implements ItemResolverInterface {
 
 		// Assign the product to the item and define the unit price.
 		//$item->setVariant($product);
-		$item->setUnitPrice($product->getPrice());
+		//$price = $this->get('app.lead_manager')->getPrice($product);
+		//var_dump($price);
+		$LawCategory = $this->entityManager->getRepository('AppBundle:LawCategory')
+			->find($product->getLawCategory());
+		$item->setUnitPrice($LawCategory->getPrice());
 
 		// Everything went fine, return the item.
 		return $item;
 	}
 
 	private function getProductRepository() {
-		return $this->entityManager->getRepository('AppBundle:Product');
+		return $this->entityManager->getRepository('AppBundle:Lead');
 	}
 }
